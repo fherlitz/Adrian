@@ -173,7 +173,7 @@ nav {
 
 .about-quadrant.parallax {
     padding: 3rem 6rem;
-    background: url('fotos/Background_2.JPG') no-repeat center center;
+    background: url('fotos/Background_2.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     color: var(--white);
@@ -238,7 +238,7 @@ nav {
 .work {
     padding: 0;
     position: relative;
-    background: url('fotos/Background_3.JPG') no-repeat center center;
+    background: url('fotos/Background_3.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     color: var(--white);
@@ -622,7 +622,7 @@ footer {
 .projects {
     padding: 0;
     position: relative;
-    background: url('fotos/Background_3.JPG') no-repeat center center;
+    background: url('fotos/Background_3.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     color: var(--white);
@@ -817,7 +817,7 @@ footer {
 
     .about-quadrant {
         min-height: 50vh;
-        background: url('fotos/Background_2.JPG') no-repeat center center;
+        background: url('fotos/Background_2.jpg') no-repeat center center;
         background-size: cover;
         background-attachment: fixed;
     }
