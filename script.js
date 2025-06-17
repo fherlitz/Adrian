@@ -362,17 +362,7 @@ function updateContent(lang) {
     });
 }
 
-// Language selection handling
-document.querySelectorAll('.lang-options li').forEach(option => {
-    option.addEventListener('click', function() {
-        const lang = this.getAttribute('data-lang');
-        document.querySelector('.current-lang-display').textContent = translations[lang].lang.display;
-        updateContent(lang);
-    });
-});
-
-// Initialize with English
-updateContent('en');
+// Note: Language selection is now handled by languageSwitcher.init() below
 
 // Language switching functionality
 const languageSwitcher = {
@@ -412,8 +402,10 @@ const languageSwitcher = {
             li.addEventListener('click', () => {
                 const lang = li.getAttribute('data-lang');
                 this.setLanguage(lang);
+                // Close dropdown after selection
                 if (langOptions) {
-                    langOptions.style.display = 'none'; // Close dropdown after selection
+                    langOptions.style.display = 'none';
+                    langOptions.classList.remove('show');
                 }
             });
         });
@@ -428,33 +420,8 @@ const languageSwitcher = {
             currentLangDisplay.textContent = translations[lang].lang.display;
         }
 
-        // Update all translatable elements
-        let updatedElements = 0;
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const keys = element.getAttribute('data-i18n').split('.');
-            let value = translations[lang];
-            for (const key of keys) {
-                value = value[key];
-            }
-            if (value) {
-                element.textContent = value;
-                updatedElements++;
-            }
-        });
-
-        // Update placeholders
-        let updatedPlaceholders = 0;
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-            const keys = element.getAttribute('data-i18n-placeholder').split('.');
-            let value = translations[lang];
-            for (const key of keys) {
-                value = value[key];
-            }
-            if (value) {
-                element.placeholder = value;
-                updatedPlaceholders++;
-            }
-        });
+        // Update all translatable elements using the global updateContent function
+        updateContent(lang);
 
         // Store language preference
         localStorage.setItem('preferred-language', lang);
