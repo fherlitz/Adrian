@@ -85,7 +85,9 @@ nav {
     color: var(--white);
     padding: 0 1rem;
     padding-top: 0;
-    background-attachment: scroll; /* default scroll so JS can control parallax */
+    background-attachment: scroll;
+    contain: layout style paint;
+    will-change: transform;
 }
 
 .hero-content h1 {
@@ -232,6 +234,9 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    image-rendering: auto;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 /* Work Section */
