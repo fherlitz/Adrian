@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ADRIAN CANTU</div>
+            <div class="nav-right">
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            <div class="language-dropdown">
+                <i class="fas fa-globe"></i>
+                <span class="current-lang-display" data-i18n="lang.display">English</span>
+                <i class="fas fa-chevron-down lang-arrow"></i>
+                <ul class="lang-options">
+                    <li data-lang="en">English</li>
+                    <li data-lang="es">Español</li>
+                    <li data-lang="de">Deutsch</li>
+                </ul>
+                </div>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 data-i18n="hero.title">LET'S BRING YOUR MUSIC TO THE NEXT LEVEL</h1>
+                <p></p>
+            </div>
+            <div class="scroll-down-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-grid">
+                <div class="about-quadrant parallax">
+                    <h2 class="about-title" data-i18n="about.title">ABOUT ME</h2>
+                    <div class="about-text">
+                        <p data-i18n="about.text">I am a guitarist, music producer, and mixing engineer from Monterrey, Mexico, now based in Berlin, Germany.</p>
+                        <p data-i18n="about.text2">With over 10 years of experience in the music field and a deep love for crafting immersive soundscapes, I will help you craft music that inspires and leaves a lasting impression.</p>
+                    </div>
+                </div>
+                <div class="about-quadrant">
+                <div class="about-image">
+                    <img src="fotos/Foto_1.jpg" alt="Personal photo">
+                    </div>
+                </div>
+                <div class="about-quadrant">
+                    <div class="about-image">
+                        <img src="fotos/Foto_2.jpg" alt="Second photo">
+                    </div>
+                </div>
+                <div class="about-quadrant parallax">
+                <div class="about-text">
+                        <p data-i18n="about.text3">My approach is all about angular decisions and intuitive moves — capturing the spirit of each project, pushing boundaries, and always staying true to the artist's vision.</p>
+                        <p data-i18n="about.text4">Driven by the idea of making music that resonates across borders, I focuses on every detail to create something both personal and universal, bringing a unique perspective — every detail counts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="work">
+            <h2 data-i18n="work.title">WHAT CAN I DO FOR YOU</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="fotos/Foto_3.JPG" alt="Production">
+                    </div>
+                    <h3 data-i18n="work.production.title">PRODUCTION</h3>
+                    <p data-i18n="work.production.text">I help you develop your song, from the initial idea to the final production.</p>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="fotos/Foto_4.JPG" alt="Guitar Work">
+                    </div>
+                    <h3 data-i18n="work.guitar.title">GUITAR WORK</h3>
+                    <p data-i18n="work.guitar.text">Everything guitar related. From high-quality recordings to live performances.</p>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="fotos/Foto_5.JPG" alt="Mixing">
+                    </div>
+                    <h3 data-i18n="work.mixing.title">MIXING</h3>
+                    <p data-i18n="work.mixing.text">Professional grade mixes that give your music the attention they deserve.</p>
+                </div>
+            </div>
+            <div style="text-align: center; padding-bottom: 4rem;">
+                <a href="#contact" class="reach-out-btn" data-i18n="work.reachOut">REACH OUT!</a>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2 data-i18n="projects.title">SOME PROJECTS I'VE WORKED IN</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <a href="https://open.spotify.com/album/02mnuneNux8jPLqo13oFZO?si=NauSqse7TSiF1pBAo0VSHQ" target="_blank" class="project-image">
+                        <img src="fotos/Artwork_1.jpeg" alt="Project 1">
+                    </a>
+                    <div class="project-info">
+                        <h3>Nico Bleak</h3>
+                        <p>All That Remains</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <a href="https://open.spotify.com/album/300mXTzDY1vCnXFAZF43sO?si=8c8859e4449249f7" target="_blank" class="project-image">
+                        <img src="fotos/Artwork_2.jpeg" alt="Project 2">
+                    </a>
+                    <div class="project-info">
+                        <h3>BLŪMĒ</h3>
+                        <p>Everything Is Going To Be OK</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <a href="https://open.spotify.com/album/5ipRNPMddo98hqd3qEXxDx?si=U_p8BkWHRW6-10cld8QY7Q" target="_blank" class="project-image">
+                        <img src="fotos/Artwork_3.jpeg" alt="Project 3">
+                    </a>
+                    <div class="project-info">
+                        <h3>Lucie Frank</h3>
+                        <p>Wild Type</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <a href="https://open.spotify.com/album/7wEFFT8ha9xLJ4w5uAZvlz?si=BOz9ixpiQ8asWL2pJmbpJg" target="_blank" class="project-image">
+                        <img src="fotos/Artwork_4.jpeg" alt="Project 4">
+                    </a>
+                    <div class="project-info">
+                        <h3>EERA</h3>
+                        <p>Forget Her</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <a href="https://open.spotify.com/album/4sadLEkalT5HJa9eilDO32?si=xjLAJhgnSRKH2p6Q7TAa1w" target="_blank" class="project-image">
+                        <img src="fotos/Artwork_5.jpeg" alt="Project 5">
+                    </a>
+                    <div class="project-info">
+                        <h3>Grimsøn</h3>
+                        <p>Leave It Where You Found It</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <a href="https://open.spotify.com/album/5DZxh0Y4lt5DR5BnA6jzV6?si=wZ_Eg5PhQvmYap4gpfOd2Q" target="_blank" class="project-image">
+                        <img src="fotos/Artwork_6.jpeg" alt="Project 6">
+                    </a>
+                    <div class="project-info">
+                        <h3>PlasticWine</h3>
+                        <p>No Iba A Existir</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <a href="https://open.spotify.com/album/2osWzs2Wfi9ARi8bkIW406?si=XkfECjZtQpS25ApG3dqExg" target="_blank" class="project-image">
+                        <img src="fotos/Artwork_7.jpeg" alt="Project 7">
+                    </a>
+                    <div class="project-info">
+                        <h3>Nico Bleak</h3>
+                        <p>Adore Me</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <a href="https://open.spotify.com/album/4wg48WqI83Bj02x6juYRuJ?si=AWT6AlIWTTiWPRZRpC_ljg" target="_blank" class="project-image">
+                        <img src="fotos/Artwork_8.jpeg" alt="Project 8">
+                    </a>
+                    <div class="project-info">
+                        <h3>Cahme</h3>
+                        <p>Von uns beiden</p>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; padding-bottom: 4rem; color: var(--white);" data-i18n="projects.more">And many more...</p>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 data-i18n="contact.title">CONTACT ME</h2>
+            <p data-i18n="contact.description">Are you interested in working with me? Please fill out the form and I will get in touch with you shortly. Looking forward to hearing from you!</p>
+            <div class="contact-content">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="surname" data-i18n="contact.name">Name</label>
+                        <div class="name-inputs">
+                            <input type="text" id="surname" name="surname" data-i18n-placeholder="contact.surname" placeholder="Surname" required autocomplete="given-name">
+                            <input type="text" id="lastname" name="lastname" data-i18n-placeholder="contact.lastname" placeholder="Last name" required autocomplete="family-name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.email">E-mail</label>
+                        <input type="email" id="email" name="email" data-i18n-placeholder="contact.email" placeholder="Your email address" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="contact.message">Message</label>
+                        <textarea id="message" name="message" data-i18n-placeholder="contact.message" placeholder="Your message" required autocomplete="off"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" data-i18n="contact.send">SEND</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h1 class="footer-title">ADRIAN CANTU</h1>
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3 data-i18n="footer.contact">CONTACT</h3>
+                    <a href="mailto:acantuguerra@gmail.com">acantuguerra@gmail.com</a>
+                    <a href="tel:+491622563464">+49 162 2563464</a>
+                </div>
+                <div class="footer-column">
+                    <h3 data-i18n="footer.follow">FOLLOW ME</h3>
+                    <a><p data-i18n="footer.instagram">Instagram:</p></a>
+                    <a href="https://instagram.com/adrian__cantu" target="_blank">@adrian__cantu</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a href="imprint.html">Imprint & Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
