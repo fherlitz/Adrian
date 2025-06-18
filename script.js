@@ -118,7 +118,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         from_name: `${surname} ${lastname}`,
         from_email: email,
         message: message,
-        to_email: "fherlitz@outlook.com"
+        to_email: "info@cantuadrian.com"
     })
     .then(function() {
     // Show success message
