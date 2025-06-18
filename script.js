@@ -95,7 +95,7 @@ if (scrollDownArrow) {
 }
 
 // Initialize EmailJS with your public key
-emailjs.init("XtupORJvfmbYXIsF3");
+emailjs.init("rsJDXLGG6L7T71boG");
 
 // Form submission handling
 document.getElementById('contact-form').addEventListener('submit', function(e) {
@@ -114,7 +114,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     submitBtn.disabled = true;
 
     // Send email using EmailJS
-    emailjs.send("service_o0srj8l", "template_mze1nbu", {
+    emailjs.send("service_yed0rth", "template_s33693i", {
         from_name: `${surname} ${lastname}`,
         from_email: email,
         message: message,
