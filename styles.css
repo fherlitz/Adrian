@@ -717,6 +717,19 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 1150px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0 2rem 4rem;
+    }
+    
+    .work-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
 @media (max-width: 1024px) {
     .hero-content h1 {
         font-size: 4rem;
