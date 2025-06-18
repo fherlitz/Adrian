@@ -167,9 +167,8 @@ nav {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     min-height: 100vh;
-    background: url('fotos/Background_2.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
+    /* Transparent so global Background_2 layer shows through */
+    background: none;
 }
 
 .about-quadrant {
@@ -799,7 +798,9 @@ footer {
     }
     
     .work {
-        background-attachment: fixed !important; /* Try fixed parallax on mobile */
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        background-size: cover !important;
     }
     
     .projects {
@@ -1066,4 +1067,33 @@ h1, h2, h3, h4, h5, h6, .logo, .hero-content h1, .about-title, .work h2, .projec
     font-family: 'Anton', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
+}
+
+/* Global parallax base background (Background_2) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('fotos/Background_2.jpg') center center no-repeat;
+    background-size: cover;
+    z-index: -3; /* behind section-specific backgrounds */
+}
+
+/* Ensure Work and Projects backgrounds remain above the base */
+.work, .projects {
+    position: relative;
+}
+
+.work::before, .projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1; /* overlay for darkness */
 }
