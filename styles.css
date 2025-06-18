@@ -93,8 +93,9 @@ nav {
 .hero-content h1 {
     font-size: 7.5rem;
     margin-bottom: 0;
-    font-family: 'Righteous', sans-serif;
-    letter-spacing: 4px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    max-width: 1200px;
     text-transform: uppercase;
     text-shadow: 2px 0 0 currentColor;
     line-height: 1.1;
@@ -203,7 +204,8 @@ nav {
     text-align: left;
     font-size: 2.5rem;
     color: #d64c198c;
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 1px 0 0 currentColor;
@@ -271,7 +273,8 @@ nav {
     padding: 5rem 1rem 3rem;
     font-size: 3rem;
     color: var(--white);
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 1px 0 0 currentColor;
@@ -371,8 +374,9 @@ nav {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Righteous', sans-serif;
-    letter-spacing: 2px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 1px 0 0 currentColor;
 }
@@ -481,14 +485,15 @@ footer {
 .footer-title {
     font-size: 12vw;
     color: var(--text-color);
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 2px 0 0 currentColor;
     white-space: nowrap;
     overflow: visible;
     width: 100%;
-    padding: 0;
+    padding: 1rem 0 0 0;
     text-align: center;
     line-height: 0.9;
 }
@@ -514,7 +519,8 @@ footer {
 .footer-column h3 {
     font-size: 2.5rem;
     color: var(--text-color);
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 1px 0 0 currentColor;
@@ -655,7 +661,8 @@ footer {
     padding: 5rem 6rem 3rem;
     font-size: 3rem;
     color: var(--white);
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 1px 0 0 currentColor;
@@ -1041,7 +1048,9 @@ footer {
     }
 }
 
-/* Headings use Righteous */
+/* Headings use Anton */
 h1, h2, h3, h4, h5, h6, .logo, .hero-content h1, .about-title, .work h2, .projects h2, .contact h2, .footer-title, .footer-column h3 {
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
