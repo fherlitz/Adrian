@@ -773,13 +773,13 @@ footer {
     }
     
     .about-grid {
-        background-attachment: scroll !important; /* Disable parallax on mobile */
+        background-attachment: fixed !important; /* Try fixed parallax on mobile */
         background-position: center center !important;
         background-size: cover !important;
     }
     
     .work {
-        background-attachment: scroll !important; /* Disable parallax on mobile */
+        background-attachment: fixed !important; /* Try fixed parallax on mobile */
     }
     
     .projects {

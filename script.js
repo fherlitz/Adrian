@@ -94,32 +94,12 @@ if (scrollDownArrow) {
     });
 }
 
-// Initialize EmailJS when library is loaded
-let emailJSReady = false;
-
-function initEmailJS() {
-    if (typeof emailjs !== 'undefined') {
-        emailjs.init("XtupORJvfmbYXIsF3");
-        emailJSReady = true;
-    }
-}
-
-// Check if EmailJS is already loaded (in case script loads synchronously)
-document.addEventListener('DOMContentLoaded', function() {
-    if (typeof emailjs !== 'undefined') {
-        initEmailJS();
-    }
-});
+// Initialize EmailJS with your public key
+emailjs.init("XtupORJvfmbYXIsF3");
 
 // Form submission handling
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    // Check if EmailJS is ready
-    if (!emailJSReady || typeof emailjs === 'undefined') {
-        alert('Email service is still loading. Please try again in a moment.');
-        return;
-    }
     
     // Get form data
     const surname = document.getElementById('surname').value;
