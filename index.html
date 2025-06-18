@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#1e3a8a">
+    
+    <!-- Mobile performance hints -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Reduce mobile resource loading -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <meta name="description" content="Professional music producer, guitarist, and mixing engineer from Mexico, based in Berlin. Specializing in music production, guitar recording, and professional mixing services. Let's bring your music to the next level.">
     <meta name="keywords" content="music producer, guitarist, mixing engineer, Berlin, Mexico, music production, recording, guitar, mixing, mastering">
     <meta name="author" content="Adrian Cantu">
@@ -18,6 +29,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Critical mobile CSS inline for instant rendering -->
+    <style>
+        /* Critical styles for immediate mobile rendering */
+        @media (max-width: 768px) {
+            .hero {
+                height: 100vh;
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('fotos/Background_1.jpg');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: #ffffff;
+                padding: 0 1rem;
+                background-attachment: scroll; /* Better performance on mobile */
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem; /* Smaller on mobile for faster rendering */
+                margin-bottom: 0;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                font-weight: 900;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-shadow: 2px 0 0 currentColor;
+                line-height: 1.1;
+                will-change: auto; /* Reduce GPU usage */
+            }
+            
+            /* Disable complex animations on mobile */
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
     
     <!-- Load fonts with display=swap for better performance -->
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -250,7 +300,26 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" async></script>
+    <!-- Mobile performance optimization -->
+    <script>
+        // Reduce main thread work on mobile
+        if (window.innerWidth <= 768) {
+            // Disable heavy operations on mobile
+            document.documentElement.style.setProperty('--reduce-motion', '1');
+            
+            // Throttle scroll events
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (scrollTimeout) return;
+                scrollTimeout = setTimeout(() => {
+                    scrollTimeout = null;
+                    // Handle scroll events here if needed
+                }, 16); // ~60fps
+            }, { passive: true });
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" async onload="initEmailJS()"></script>
     <script src="script.js" defer></script>
 </body>
 </html> 

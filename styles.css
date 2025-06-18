@@ -166,6 +166,9 @@ nav {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     min-height: 100vh;
+    background: url('fotos/Background_2.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .about-quadrant {
@@ -175,9 +178,6 @@ nav {
 
 .about-quadrant.parallax {
     padding: 3rem 6rem;
-    background: url('fotos/Background_2.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
     color: var(--white);
     display: flex;
     flex-direction: column;
@@ -202,7 +202,7 @@ nav {
 .about-title {
     text-align: left;
     font-size: 2.5rem;
-    color: #9e330c8c;
+    color: #d64c198c;
     font-family: 'Righteous', sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -759,6 +759,33 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Mobile performance optimizations */
+    * {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    
+    /* Reduce complex transforms */
+    .hero {
+        background-attachment: scroll !important; /* Much better mobile performance */
+        will-change: auto;
+        transform: none;
+    }
+    
+    .about-grid {
+        background-attachment: scroll !important; /* Disable parallax on mobile */
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    
+    .work {
+        background-attachment: scroll !important; /* Disable parallax on mobile */
+    }
+    
+    .projects {
+        background-attachment: scroll !important; /* Disable parallax on mobile */
+    }
+
     nav {
         padding: 1rem 5%;
     }
@@ -822,9 +849,6 @@ footer {
 
     .about-quadrant {
         min-height: 50vh;
-        background: url('fotos/Background_2.jpg') no-repeat center center;
-        background-size: cover;
-        background-attachment: fixed;
     }
 
     .about-quadrant::before {

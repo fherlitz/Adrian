@@ -94,12 +94,32 @@ if (scrollDownArrow) {
     });
 }
 
-// Initialize EmailJS with your public key
-emailjs.init("XtupORJvfmbYXIsF3"); // You'll need to replace this with your actual public key
+// Initialize EmailJS when library is loaded
+let emailJSReady = false;
+
+function initEmailJS() {
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init("XtupORJvfmbYXIsF3");
+        emailJSReady = true;
+    }
+}
+
+// Check if EmailJS is already loaded (in case script loads synchronously)
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof emailjs !== 'undefined') {
+        initEmailJS();
+    }
+});
 
 // Form submission handling
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    // Check if EmailJS is ready
+    if (!emailJSReady || typeof emailjs === 'undefined') {
+        alert('Email service is still loading. Please try again in a moment.');
+        return;
+    }
     
     // Get form data
     const surname = document.getElementById('surname').value;
@@ -149,8 +169,13 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         });
     });
 
-// Add animation on scroll
+// Add animation on scroll (optimized for mobile)
 const animateOnScroll = () => {
+    // Skip animations on mobile for better performance
+    if (window.innerWidth <= 768) {
+        return;
+    }
+    
     const elements = document.querySelectorAll('.portfolio-item, .about-content, .contact-content');
     
     const observer = new IntersectionObserver((entries) => {
@@ -160,18 +185,22 @@ const animateOnScroll = () => {
                 entry.target.style.transform = 'translateY(0)';
             }
         });
+    }, {
+        rootMargin: '20px' // Start animation earlier
     });
 
     elements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
-        element.style.transition = 'all 0.5s ease';
+        element.style.transition = 'all 0.3s ease'; // Faster transitions
         observer.observe(element);
     });
 };
 
-// Initialize animations
-animateOnScroll();
+// Initialize animations only after page load on desktop
+if (window.innerWidth > 768) {
+    window.addEventListener('load', animateOnScroll);
+}
 
 // Translations object
 const translations = {
@@ -364,51 +393,63 @@ function updateContent(lang) {
 
 // Note: Language selection is now handled by languageSwitcher.init() below
 
-// Language switching functionality
+// Language switching functionality (mobile optimized)
 const languageSwitcher = {
     currentLang: 'en',
 
     // Get browser language
     getBrowserLanguage() {
         const browserLang = navigator.language || navigator.userLanguage;
-        
         const primaryLang = browserLang.split('-')[0];
-        
-        if (translations[primaryLang]) {
-            return primaryLang;
-        }
-        return 'en';
+        return translations[primaryLang] ? primaryLang : 'en';
     },
 
     init() {
-        
-        // Check if this is the first visit
-        const hasVisitedBefore = localStorage.getItem('has-visited-before');
-        
-        if (!hasVisitedBefore) {
-            this.currentLang = this.getBrowserLanguage();
-            localStorage.setItem('has-visited-before', 'true');
-        } else {
-            // Not first visit - use saved preference
-            const savedLang = localStorage.getItem('preferred-language');
-            this.currentLang = savedLang || this.getBrowserLanguage();
-        }
-        
-        // Set initial language
-        this.setLanguage(this.currentLang);
-        
-        // Add click event listeners to language options
-        document.querySelectorAll('.lang-options li').forEach(li => {
-            li.addEventListener('click', () => {
-                const lang = li.getAttribute('data-lang');
-                this.setLanguage(lang);
-                // Close dropdown after selection
-                if (langOptions) {
-                    langOptions.style.display = 'none';
-                    langOptions.classList.remove('show');
-                }
+        // Use requestIdleCallback for non-critical initialization
+        const initializeLanguage = () => {
+            // Check if this is the first visit
+            const hasVisitedBefore = localStorage.getItem('has-visited-before');
+            
+            if (!hasVisitedBefore) {
+                this.currentLang = this.getBrowserLanguage();
+                localStorage.setItem('has-visited-before', 'true');
+            } else {
+                // Not first visit - use saved preference
+                const savedLang = localStorage.getItem('preferred-language');
+                this.currentLang = savedLang || this.getBrowserLanguage();
+            }
+            
+            // Set initial language
+            this.setLanguage(this.currentLang);
+            
+            // Add click event listeners to language options (throttled for mobile)
+            let throttleTimeout;
+            document.querySelectorAll('.lang-options li').forEach(li => {
+                li.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (throttleTimeout) return; // Prevent rapid clicks on mobile
+                    
+                    throttleTimeout = setTimeout(() => {
+                        throttleTimeout = null;
+                    }, 300);
+                    
+                    const lang = li.getAttribute('data-lang');
+                    this.setLanguage(lang);
+                    // Close dropdown after selection
+                    if (langOptions) {
+                        langOptions.style.display = 'none';
+                        langOptions.classList.remove('show');
+                    }
+                });
             });
-        });
+        };
+
+        // Use requestIdleCallback if available, otherwise setTimeout
+        if (window.requestIdleCallback) {
+            requestIdleCallback(initializeLanguage);
+        } else {
+            setTimeout(initializeLanguage, 0);
+        }
     },
 
     setLanguage(lang) {
