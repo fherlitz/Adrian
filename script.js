@@ -310,7 +310,7 @@ const translations = {
             privacy: {
                 title: "Política de Privacidad",
                 section1: {
-                    title: "1. Protección de Datos de un Vistazo",
+                    title: "1. Protección de Datos",
                     general: {
                         title: "Notas Generales",
                         text: "Las siguientes notas proporcionan una descripción simple de lo que sucede con sus datos personales cuando visita este sitio web. Los datos personales son cualquier dato que puede identificarlo personalmente."
