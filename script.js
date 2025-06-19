@@ -149,7 +149,7 @@ const translations = {
             text: "I am a guitarist, music producer, and mixing engineer from Monterrey, Mexico, now based in Berlin, Germany.",
             text2: "With over 10 years of experience in the music field and a deep love for crafting immersive soundscapes, I will help you craft music that inspires and leaves a lasting impression.",
             text3: "My approach is all about angular decisions and intuitive moves — capturing the spirit of each project, pushing boundaries, and always staying true to the artist's vision.",
-            text4: "Driven by the idea of making music that resonates across borders, I focuses on every detail to create something both personal and universal, bringing a unique perspective — every detail counts."
+            text4: "Driven making music that resonates across borders, I focus up to the finest aspects to create something both personal and universal, bringing a unique perspective — every detail counts."
         },
         work: {
             title: "WHAT CAN I DO FOR YOU",
@@ -159,7 +159,7 @@ const translations = {
             },
             guitar: {
                 title: "GUITAR WORK",
-                text: "Everything guitar related. From high-quality recordings to live performances."
+                text: "All things guitar. From high-quality recordings to live performances."
             },
             mixing: {
                 title: "MIXING",
@@ -168,12 +168,12 @@ const translations = {
             reachOut: "REACH OUT!"
         },
         projects: {
-            title: "SOME PROJECTS I'VE WORKED IN",
+            title: "SOME PROJECTS I'VE WORKED WITH",
             more: "And many more..."
         },
         contact: {
             title: "CONTACT ME",
-            description: "Are you interested in working with me? Please fill out the form and I will get in touch with you shortly. Looking forward to hearing from you!",
+            description: "Are you interested in working with me? Fill out the form and I will get in touch with you shortly. Looking forward to hearing from you!",
             name: "Name",
             surname: "Name",
             lastname: "Last name",
@@ -255,12 +255,12 @@ const translations = {
         about: {
             title: "SOBRE MÍ",
             text: "Soy guitarrista, productor musical e ingeniero de mezcla de Monterrey, México, actualmente radicado en Berlín, Alemania.",
-            text2: "Con más de 10 años de experiencia en el campo musical y un profundo amor por crear paisajes sonoros inmersivos, te ayudaré a crear música que inspire y deje una impresión duradera.",
+            text2: "Con más de 10 años de experiencia en el campo musical y un profundo amor por crear paisajes sonoros inmersivos, te ayudaré a elaborar música que inspire y deje una impresión duradera.",
             text3: "Mi enfoque se basa en decisiones angulares y movimientos intuitivos — capturando el espíritu de cada proyecto, empujando límites y siempre manteniéndome fiel a la visión del artista.",
-            text4: "Impulsado por la idea de hacer música que resuene a través de las fronteras, me enfoco en cada detalle para crear algo tanto personal como universal, aportando una perspectiva única — cada detalle cuenta."
+            text4: "Impulsado por la idea de hacer que la música resuene rompiendo fronteras, me enfoco en cada elemento para crear algo tanto personal como universal, aportando una perspectiva única — cada detalle cuenta."
         },
         work: {
-            title: "QUÉ PUEDO HACER POR TI",
+            title: "LO QUE YO PUEDO HACER POR TI",
             production: {
                 title: "PRODUCCIÓN",
                 text: "Te ayudo a desarrollar tu canción, desde la idea inicial hasta la producción final."
@@ -276,7 +276,7 @@ const translations = {
             reachOut: "¡CONTÁCTAME!"
         },
         projects: {
-            title: "ALGUNOS PROYECTOS EN LOS QUE HE TRABAJADO",
+            title: "ALGUNOS PROYECTOS CON LOS QUE HE TRABAJADO",
             more: "Y muchos más..."
         },
         contact: {
@@ -362,34 +362,34 @@ const translations = {
         },
         about: {
             title: "ÜBER MICH",
-            text: "Ich bin Gitarrist, Musikproduzent und Mixing-Engineer aus Monterrey, Mexiko, und lebe jetzt in Berlin, Deutschland.",
-            text2: "Mit über 10 Jahren Erfahrung im Musikbereich und einer tiefen Liebe zum Erschaffen immersiver Klanglandschaften helfe ich dir, Musik zu kreieren, die inspiriert und einen bleibenden Eindruck hinterlässt.",
-            text3: "Mein Ansatz basiert auf präzisen Entscheidungen und intuitiven Bewegungen — den Geist jedes Projekts einfangen, Grenzen verschieben und immer der Vision des Künstlers treu bleiben.",
-            text4: "Getrieben von der Idee, Musik zu machen, die über Grenzen hinweg resoniert, konzentriere ich mich auf jedes Detail, um etwas zu schaffen, das sowohl persönlich als auch universell ist und eine einzigartige Perspektive bringt — jedes Detail zählt."
+            text: "Ich bin Gitarrist, Musikproduzent und Mixing Engineer aus Monterrey, Mexiko, und lebe mittlerweile in Berlin, Deutschland.",
+            text2: "Mit über zehn Jahren Erfahrung in der Musik und einer tiefen Leidenschaft für immersive Klang, helfe ich dir, Musik zu erschaffen, die inspiriert und einen bleibenden Eindruck hinterlässt.",
+            text3: "Mein Ansatz basiert auf präzisen Entscheidungen und intuitiven Impulsen, den Charakter jedes Projekts einfangen, und dabei stets der künstlerischen Vision treu bleiben.",
+            text4: "Getrieben von dem Wunsch, Musik zu schaffen, die über Grenzen hinweg berührt, achte ich auf jedes Element, um etwas zu kreieren, das sowohl persönlich als auch universell ist, mit einer einzigartigen Perspektive. Denn jedes Detail zählt."
         },
         work: {
             title: "WAS ICH FÜR DICH TUN KANN",
             production: {
                 title: "PRODUKTION",
-                text: "Ich helfe dir, dein Lied zu entwickeln, von der ersten Idee bis zur finalen Produktion."
+                text: "Ich unterstütze dich bei jedem Schritt der Entwicklung deines Songs. Von der ersten Idee bis zur finalen Produktion."
             },
             guitar: {
                 title: "GITARRENARBEIT",
-                text: "Alles rund um die Gitarre. Von hochwertigen Aufnahmen bis zu Live-Auftritten."
+                text: "Alles rund um die Gitarre. Von hochwertigen Studioaufnahmen bis hin zu Live-Performances."
             },
             mixing: {
-                title: "MISCHEN",
-                text: "Professionelle Mischungen, die deiner Musik die Aufmerksamkeit schenken, die sie verdient."
+                title: "MIXING",
+                text: "Professionelle Mischungen, die deiner Musik die Aufmerksamkeit geben die sie verdient."
             },
             reachOut: "KONTAKTIEREN!"
         },
         projects: {
-            title: "EINIGE PROJEKTE, AN DENEN ICH GEARBEITET HABE",
+            title: "EINIGE PROJEKTE, MIT DENEN ICH GEARBEITET HABE",
             more: "Und viele mehr..."
         },
         contact: {
             title: "KONTAKTIERE MICH",
-            description: "Interessierst du dich für eine Zusammenarbeit? Bitte fülle das Formular aus, und ich werde mich in Kürze bei dir melden. Ich freue mich darauf, von dir zu hören!",
+            description: "Interessierst du dich für eine Zusammenarbeit? Fülle einfach das Formular aus! Ich melde mich zeitnah bei dir. Ich freue mich darauf, von dir zu hören!",
             name: "Name",
             surname: "Vorname",
             lastname: "Nachname",
