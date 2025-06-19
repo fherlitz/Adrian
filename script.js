@@ -9,58 +9,7 @@ menuBtn.addEventListener('click', () => {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 });
 
-// Language dropdown functionality
-if (languageDropdown) {
-    // Handle language selection
-    if (langOptions) {
-        langOptions.addEventListener('click', (event) => {
-            if (event.target.tagName === 'LI') {
-                event.stopPropagation();
-                const lang = event.target.getAttribute('data-lang');
-                if (lang) {
-                    languageSwitcher.setLanguage(lang);
-                    langOptions.style.display = 'none';
-                    langOptions.classList.remove('show');
-                }
-            }
-        });
-    }
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (event) => {
-        if (langOptions && !languageDropdown.contains(event.target)) {
-            langOptions.style.display = 'none';
-            langOptions.classList.remove('show');
-        }
-    });
-
-    // Reset dropdown display on hover
-    languageDropdown.addEventListener('mouseenter', () => {
-        if (window.innerWidth <= 768) return; // disable hover on mobile
-        if (langOptions) {
-            langOptions.style.display = 'block';
-        }
-    });
-
-    // Toggle overlay on click for mobile
-    languageDropdown.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-            e.stopPropagation();
-            if (langOptions) {
-                const isShown = langOptions.classList.toggle('show');
-                langOptions.style.display = isShown ? 'flex' : 'none';
-            }
-        }
-    });
-
-    // Close overlay when clicking outside (mobile)
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768 && langOptions && langOptions.classList.contains('show') && !langOptions.contains(e.target) && !languageDropdown.contains(e.target)) {
-            langOptions.classList.remove('show');
-            langOptions.style.display = 'none';
-        }
-    });
-}
+// Language dropdown functionality will be handled by languageSwitcher.init()
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -97,8 +46,10 @@ if (scrollDownArrow) {
 // Initialize EmailJS with your public key
 emailjs.init("rsJDXLGG6L7T71boG");
 
-// Form submission handling
-document.getElementById('contact-form').addEventListener('submit', function(e) {
+// Form submission handling - only if contact form exists
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
     // Get form data
@@ -148,6 +99,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         console.error("Error sending email:", error);
         });
     });
+}
 
 // Add animation on scroll (optimized for mobile)
 const animateOnScroll = () => {
@@ -186,7 +138,8 @@ if (window.innerWidth > 768) {
 const translations = {
     en: {
         nav: {
-            contact: "Contact"
+            contact: "Contact",
+            back: "Back"
         },
         hero: {
             title: "LET'S BRING YOUR MUSIC TO THE NEXT LEVEL"
@@ -231,7 +184,61 @@ const translations = {
         footer: {
             contact: "CONTACT",
             follow: "FOLLOW ME",
-            instagram: "Instagram:"
+            instagram: "Instagram:",
+            imprint: "Imprint & Privacy"
+        },
+        imprint: {
+            title: "Imprint & Privacy Policy",
+            tmg: {
+                title: "Information according to § 5 TMG"
+            },
+            contact: {
+                title: "Contact",
+                info: "Email: info@cantuadrian.com<br>Phone: +49 162 2563464"
+            },
+            responsible: {
+                title: "Responsible for content according to § 55 Abs. 2 RStV"
+            },
+            privacy: {
+                title: "Privacy Policy",
+                section1: {
+                    title: "1. Data Protection at a Glance",
+                    general: {
+                        title: "General Notes",
+                        text: "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can personally identify you."
+                    },
+                    data: {
+                        title: "Data Collection on this Website",
+                        text: "This website uses EmailJS for the contact form functionality. When you submit the contact form, your data is processed through EmailJS's servers. The data is only used to send you a response and is not stored permanently."
+                    }
+                },
+                section2: {
+                    title: "2. Hosting",
+                    text: "This website is hosted on GitHub Pages. GitHub may collect certain technical data such as IP addresses and browser information. For more information, please refer to GitHub's privacy policy."
+                },
+                section3: {
+                    title: "3. General Notes and Mandatory Information",
+                    protection: {
+                        title: "Data Protection",
+                        text: "The operators of this website take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy."
+                    },
+                    party: {
+                        title: "Note on the Responsible Party",
+                        text: "The party responsible for processing data on this website is:"
+                    }
+                },
+                section4: {
+                    title: "4. Data Collection on this Website",
+                    form: {
+                        title: "Contact Form",
+                        text: "If you send us inquiries via the contact form, your information from the inquiry form, including the contact details you provided there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We do not share this data without your consent."
+                    }
+                }
+            },
+            copyright: {
+                title: "Copyright",
+                text: "© 2024 Adrian Cantu. All rights reserved. The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator."
+            }
         },
         lang: {
             display: "English"
@@ -239,7 +246,8 @@ const translations = {
     },
     es: {
         nav: {
-            contact: "Contacto"
+            contact: "Contacto",
+            back: "Volver"
         },
         hero: {
             title: "LLEVEMOS TU MÚSICA AL SIGUIENTE NIVEL"
@@ -284,7 +292,61 @@ const translations = {
         footer: {
             contact: "CONTACTO",
             follow: "SÍGUEME",
-            instagram: "Instagram:"
+            instagram: "Instagram:",
+            imprint: "Aviso Legal y Privacidad"
+        },
+        imprint: {
+            title: "Aviso Legal y Política de Privacidad",
+            tmg: {
+                title: "Información según § 5 TMG"
+            },
+            contact: {
+                title: "Contacto",
+                info: "Email: info@cantuadrian.com<br>Teléfono: +49 162 2563464"
+            },
+            responsible: {
+                title: "Responsable del contenido según § 55 Abs. 2 RStV"
+            },
+            privacy: {
+                title: "Política de Privacidad",
+                section1: {
+                    title: "1. Protección de Datos de un Vistazo",
+                    general: {
+                        title: "Notas Generales",
+                        text: "Las siguientes notas proporcionan una descripción simple de lo que sucede con sus datos personales cuando visita este sitio web. Los datos personales son cualquier dato que puede identificarlo personalmente."
+                    },
+                    data: {
+                        title: "Recopilación de Datos en este Sitio Web",
+                        text: "Este sitio web utiliza EmailJS para la funcionalidad del formulario de contacto. Cuando envía el formulario de contacto, sus datos se procesan a través de los servidores de EmailJS. Los datos solo se utilizan para enviarle una respuesta y no se almacenan permanentemente."
+                    }
+                },
+                section2: {
+                    title: "2. Alojamiento",
+                    text: "Este sitio web está alojado en GitHub Pages. GitHub puede recopilar ciertos datos técnicos como direcciones IP e información del navegador. Para más información, consulte la política de privacidad de GitHub."
+                },
+                section3: {
+                    title: "3. Notas Generales e Información Obligatoria",
+                    protection: {
+                        title: "Protección de Datos",
+                        text: "Los operadores de este sitio web toman muy en serio la protección de sus datos personales. Tratamos sus datos personales de manera confidencial y de acuerdo con las regulaciones estatutarias de protección de datos y esta política de privacidad."
+                    },
+                    party: {
+                        title: "Nota sobre la Parte Responsable",
+                        text: "La parte responsable del procesamiento de datos en este sitio web es:"
+                    }
+                },
+                section4: {
+                    title: "4. Recopilación de Datos en este Sitio Web",
+                    form: {
+                        title: "Formulario de Contacto",
+                        text: "Si nos envía consultas a través del formulario de contacto, su información del formulario de consulta, incluidos los datos de contacto que proporcionó allí, será almacenada por nosotros con el propósito de procesar la consulta y en caso de preguntas de seguimiento. No compartimos estos datos sin su consentimiento."
+                    }
+                }
+            },
+            copyright: {
+                title: "Derechos de Autor",
+                text: "© 2024 Adrian Cantu. Todos los derechos reservados. El contenido y las obras creadas por los operadores del sitio en estas páginas están sujetos a la ley de derechos de autor alemana. La duplicación, procesamiento, distribución o cualquier forma de comercialización de dicho material más allá del alcance de la ley de derechos de autor requerirá el consentimiento previo por escrito de su respectivo autor o creador."
+            }
         },
         lang: {
             display: "Español"
@@ -292,7 +354,8 @@ const translations = {
     },
     de: {
         nav: {
-            contact: "Kontakt"
+            contact: "Kontakt",
+            back: "Zurück"
         },
         hero: {
             title: "LASS UNS DEINE MUSIK AUF DAS NÄCHSTE LEVEL BRINGEN"
@@ -337,7 +400,61 @@ const translations = {
         footer: {
             contact: "KONTAKT",
             follow: "FOLGE MIR",
-            instagram: "Instagram:"
+            instagram: "Instagram:",
+            imprint: "Impressum & Datenschutz"
+        },
+        imprint: {
+            title: "Impressum & Datenschutzerklärung",
+            tmg: {
+                title: "Angaben gemäß § 5 TMG"
+            },
+            contact: {
+                title: "Kontakt",
+                info: "E-Mail: info@cantuadrian.com<br>Telefon: +49 162 2563464"
+            },
+            responsible: {
+                title: "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV"
+            },
+            privacy: {
+                title: "Datenschutzerklärung",
+                section1: {
+                    title: "1. Datenschutz auf einen Blick",
+                    general: {
+                        title: "Allgemeine Hinweise",
+                        text: "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können."
+                    },
+                    data: {
+                        title: "Datenerfassung auf dieser Website",
+                        text: "Diese Website nutzt EmailJS für die Kontaktformular-Funktionalität. Wenn Sie das Kontaktformular absenden, werden Ihre Daten über EmailJS's Server verarbeitet. Die Daten werden nur verwendet, um Ihnen eine Antwort zu senden und werden nicht dauerhaft gespeichert."
+                    }
+                },
+                section2: {
+                    title: "2. Hosting",
+                    text: "Diese Website wird auf GitHub Pages gehostet. GitHub kann bestimmte technische Daten wie IP-Adressen und Browser-Informationen sammeln. Weitere Informationen finden Sie in GitHubs Datenschutzerklärung."
+                },
+                section3: {
+                    title: "3. Allgemeine Hinweise und Pflichtinformationen",
+                    protection: {
+                        title: "Datenschutz",
+                        text: "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung."
+                    },
+                    party: {
+                        title: "Hinweis zur verantwortlichen Stelle",
+                        text: "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:"
+                    }
+                },
+                section4: {
+                    title: "4. Datenerfassung auf dieser Website",
+                    form: {
+                        title: "Kontaktformular",
+                        text: "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter."
+                    }
+                }
+            },
+            copyright: {
+                title: "Urheberrecht",
+                text: "© 2024 Adrian Cantu. Alle Rechte vorbehalten. Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+            }
         },
         lang: {
             display: "Deutsch"
@@ -354,7 +471,12 @@ function updateContent(lang) {
             value = value[key];
         }
         if (value) {
-            element.textContent = value;
+            // Use innerHTML for content that contains HTML tags (like <br>)
+            if (value.includes('<br>')) {
+                element.innerHTML = value;
+            } else {
+                element.textContent = value;
+            }
         }
     });
 
@@ -402,26 +524,61 @@ const languageSwitcher = {
             // Set initial language
             this.setLanguage(this.currentLang);
             
-            // Add click event listeners to language options (throttled for mobile)
-            let throttleTimeout;
-            document.querySelectorAll('.lang-options li').forEach(li => {
-                li.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    if (throttleTimeout) return; // Prevent rapid clicks on mobile
-                    
-                    throttleTimeout = setTimeout(() => {
-                        throttleTimeout = null;
-                    }, 300);
-                    
-                    const lang = li.getAttribute('data-lang');
-                    this.setLanguage(lang);
-                    // Close dropdown after selection
-                    if (langOptions) {
+            // Setup language dropdown functionality
+            const languageDropdown = document.querySelector('.language-dropdown');
+            const langOptions = document.querySelector('.lang-options');
+            
+            if (languageDropdown) {
+                // Handle language selection
+                if (langOptions) {
+                    langOptions.addEventListener('click', (event) => {
+                        if (event.target.tagName === 'LI') {
+                            event.stopPropagation();
+                            const lang = event.target.getAttribute('data-lang');
+                            if (lang) {
+                                this.setLanguage(lang);
+                                langOptions.style.display = 'none';
+                                langOptions.classList.remove('show');
+                            }
+                        }
+                    });
+                }
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (event) => {
+                    if (langOptions && !languageDropdown.contains(event.target)) {
                         langOptions.style.display = 'none';
                         langOptions.classList.remove('show');
                     }
                 });
-            });
+
+                // Reset dropdown display on hover
+                languageDropdown.addEventListener('mouseenter', () => {
+                    if (window.innerWidth <= 768) return; // disable hover on mobile
+                    if (langOptions) {
+                        langOptions.style.display = 'block';
+                    }
+                });
+
+                // Toggle overlay on click for mobile
+                languageDropdown.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.stopPropagation();
+                        if (langOptions) {
+                            const isShown = langOptions.classList.toggle('show');
+                            langOptions.style.display = isShown ? 'flex' : 'none';
+                        }
+                    }
+                });
+
+                // Close overlay when clicking outside (mobile)
+                document.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768 && langOptions && langOptions.classList.contains('show') && !langOptions.contains(e.target) && !languageDropdown.contains(e.target)) {
+                        langOptions.classList.remove('show');
+                        langOptions.style.display = 'none';
+                    }
+                });
+            }
         };
 
         // Use requestIdleCallback if available, otherwise setTimeout

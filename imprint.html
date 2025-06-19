@@ -2,17 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#1e3a8a">
+    
+    <!-- Mobile performance hints -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Reduce mobile resource loading -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="description" content="Imprint and Privacy Policy for Adrian Cantu - Professional music producer, guitarist, and mixing engineer based in Berlin.">
+    <meta name="keywords" content="Adrian Cantu, imprint, privacy policy, music producer, Berlin">
+    <meta name="author" content="Adrian Cantu">
+    <meta property="og:title" content="Imprint & Privacy Policy - Adrian Cantu">
+    <meta property="og:description" content="Legal information and privacy policy for Adrian Cantu's professional music services.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="fotos/Artwork_2.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Imprint & Privacy - Adrian Cantu</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Load fonts with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Load Font Awesome asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <link rel="icon" type="image/x-icon" href="fotos/Artwork_2.jpeg">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="fotos/Background_1.jpg">
 </head>
-<body style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('fotos/Background_1.jpg') no-repeat center center fixed; background-size: cover; margin: 0; min-height: 100vh;">
+<body style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('fotos/Background_1.jpg') no-repeat center center fixed; background-size: cover; margin: 0; min-height: 100vh;">
     <header>
         <nav>
             <div class="logo">ADRIAN CANTU</div>
             <div class="nav-right">
-                <a href="index.html">Home</a>
+                <a href="index.html" data-i18n="nav.back">Back</a>
                 <div class="language-dropdown">
                     <i class="fas fa-globe"></i>
                     <span class="current-lang-display" data-i18n="lang.display">English</span>
@@ -30,58 +66,58 @@
         </nav>
     </header>
 
-    <main class="imprint-page">
+    <main class="imprint-page" style="background: rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);">
         <div class="imprint-content" style="max-width: 800px; margin: 4rem auto; padding: 3rem; border-radius: 10px;">
-            <h1 style="font-size: 3.5rem; margin-bottom: 3rem; text-align: center; color: var(--white);">Imprint & Privacy Policy</h1>
+            <h1 style="font-size: 3.5rem; margin-bottom: 3rem; text-align: center; color: var(--white);" data-i18n="imprint.title">Imprint & Privacy Policy</h1>
             
             <section style="margin-bottom: 3rem;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);">Information according to § 5 TMG</h2>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);" data-i18n="imprint.tmg.title">Information according to § 5 TMG</h2>
                 <p style="line-height: 1.8; color: var(--white); font-size: 1.2rem;">Adrian Cantu<br>
                 SPENERSTR. 17, 10557<br>
                 Berlin, Germany</p>
             </section>
 
             <section style="margin-bottom: 3rem;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);">Contact</h2>
-                <p style="line-height: 1.8; color: var(--white); font-size: 1.2rem;">Email: info@cantuadrian.com<br>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);" data-i18n="imprint.contact.title">Contact</h2>
+                <p style="line-height: 1.8; color: var(--white); font-size: 1.2rem;" data-i18n="imprint.contact.info">Email: info@cantuadrian.com<br>
                 Phone: +49 162 2563464</p>
             </section>
 
             <section style="margin-bottom: 3rem;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);">Responsible for content according to § 55 Abs. 2 RStV</h2>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);" data-i18n="imprint.responsible.title">Responsible for content according to § 55 Abs. 2 RStV</h2>
                 <p style="line-height: 1.8; color: var(--white); font-size: 1.2rem;">Adrian Cantu<br>
                 Berlin, Germany</p>
             </section>
 
             <section style="margin-bottom: 3rem;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);">Privacy Policy</h2>
-                <h3 style="font-size: 2rem; margin: 1.5rem 0 1rem; color: var(--white);">1. Data Protection at a Glance</h3>
-                <h4 style="font-size: 1.6rem; margin: 1rem 0 0.5rem; color: var(--white);">General Notes</h4>
-                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;">The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can personally identify you.</p>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);" data-i18n="imprint.privacy.title">Privacy Policy</h2>
+                <h3 style="font-size: 2rem; margin: 1.5rem 0 1rem; color: var(--white);" data-i18n="imprint.privacy.section1.title">1. Data Protection at a Glance</h3>
+                <h4 style="font-size: 1.6rem; margin: 1rem 0 0.5rem; color: var(--white);" data-i18n="imprint.privacy.section1.general.title">General Notes</h4>
+                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;" data-i18n="imprint.privacy.section1.general.text">The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can personally identify you.</p>
 
-                <h4 style="font-size: 1.6rem; margin: 1rem 0 0.5rem; color: var(--white);">Data Collection on this Website</h4>
-                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;">This website uses EmailJS for the contact form functionality. When you submit the contact form, your data is processed through EmailJS's servers. The data is only used to send you a response and is not stored permanently.</p>
+                <h4 style="font-size: 1.6rem; margin: 1rem 0 0.5rem; color: var(--white);" data-i18n="imprint.privacy.section1.data.title">Data Collection on this Website</h4>
+                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;" data-i18n="imprint.privacy.section1.data.text">This website uses EmailJS for the contact form functionality. When you submit the contact form, your data is processed through EmailJS's servers. The data is only used to send you a response and is not stored permanently.</p>
 
-                <h3 style="font-size: 2rem; margin: 1.5rem 0 1rem; color: var(--white);">2. Hosting</h3>
-                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;">This website is hosted on GitHub Pages. GitHub may collect certain technical data such as IP addresses and browser information. For more information, please refer to GitHub's privacy policy.</p>
+                <h3 style="font-size: 2rem; margin: 1.5rem 0 1rem; color: var(--white);" data-i18n="imprint.privacy.section2.title">2. Hosting</h3>
+                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;" data-i18n="imprint.privacy.section2.text">This website is hosted on GitHub Pages. GitHub may collect certain technical data such as IP addresses and browser information. For more information, please refer to GitHub's privacy policy.</p>
 
-                <h3 style="font-size: 2rem; margin: 1.5rem 0 1rem; color: var(--white);">3. General Notes and Mandatory Information</h3>
-                <h4 style="font-size: 1.6rem; margin: 1rem 0 0.5rem; color: var(--white);">Data Protection</h4>
-                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;">The operators of this website take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy.</p>
+                <h3 style="font-size: 2rem; margin: 1.5rem 0 1rem; color: var(--white);" data-i18n="imprint.privacy.section3.title">3. General Notes and Mandatory Information</h3>
+                <h4 style="font-size: 1.6rem; margin: 1rem 0 0.5rem; color: var(--white);" data-i18n="imprint.privacy.section3.protection.title">Data Protection</h4>
+                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;" data-i18n="imprint.privacy.section3.protection.text">The operators of this website take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy.</p>
 
-                <h4 style="font-size: 1.6rem; margin: 1rem 0 0.5rem; color: var(--white);">Note on the Responsible Party</h4>
-                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;">The party responsible for processing data on this website is:</p>
+                <h4 style="font-size: 1.6rem; margin: 1rem 0 0.5rem; color: var(--white);" data-i18n="imprint.privacy.section3.party.title">Note on the Responsible Party</h4>
+                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;" data-i18n="imprint.privacy.section3.party.text">The party responsible for processing data on this website is:</p>
                 <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;">Adrian Cantu<br>
                 Berlin, Germany</p>
 
-                <h3 style="font-size: 2rem; margin: 1.5rem 0 1rem; color: var(--white);">4. Data Collection on this Website</h3>
-                <h4 style="font-size: 1.6rem; margin: 1rem 0 0.5rem; color: var(--white);">Contact Form</h4>
-                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;">If you send us inquiries via the contact form, your information from the inquiry form, including the contact details you provided there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We do not share this data without your consent.</p>
+                <h3 style="font-size: 2rem; margin: 1.5rem 0 1rem; color: var(--white);" data-i18n="imprint.privacy.section4.title">4. Data Collection on this Website</h3>
+                <h4 style="font-size: 1.6rem; margin: 1rem 0 0.5rem; color: var(--white);" data-i18n="imprint.privacy.section4.form.title">Contact Form</h4>
+                <p style="line-height: 1.8; color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;" data-i18n="imprint.privacy.section4.form.text">If you send us inquiries via the contact form, your information from the inquiry form, including the contact details you provided there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We do not share this data without your consent.</p>
             </section>
 
             <section style="margin-bottom: 3rem;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);">Copyright</h2>
-                <p style="line-height: 1.8; color: var(--white); font-size: 1.2rem;">© 2024 Adrian Cantu. All rights reserved. The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator.</p>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);" data-i18n="imprint.copyright.title">Copyright</h2>
+                <p style="line-height: 1.8; color: var(--white); font-size: 1.2rem;" data-i18n="imprint.copyright.text">© 2024 Adrian Cantu. All rights reserved. The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator.</p>
             </section>
         </div>
     </main>
@@ -102,11 +138,31 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <a href="index.html">Home</a>
+                <a href="index.html" data-i18n="nav.back">Back</a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Mobile performance optimization -->
+    <script>
+        // Reduce main thread work on mobile
+        if (window.innerWidth <= 768) {
+            // Disable heavy operations on mobile
+            document.documentElement.style.setProperty('--reduce-motion', '1');
+            
+            // Throttle scroll events
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (scrollTimeout) return;
+                scrollTimeout = setTimeout(() => {
+                    scrollTimeout = null;
+                    // Handle scroll events here if needed
+                }, 16); // ~60fps
+            }, { passive: true });
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html> 

@@ -1097,3 +1097,7 @@ body::before {
     background: rgba(0, 0, 0, 0.7);
     z-index: 1; /* overlay for darkness */
 }
+
+.imprint-content h1 {
+    word-break: break-word;
+}
