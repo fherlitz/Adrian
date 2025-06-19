@@ -26,12 +26,14 @@ body {
 
 /* Header and Navigation */
 header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     background: transparent;
+    backdrop-filter: blur(10px);
     box-shadow: none;
+    transition: background 0.3s ease;
 }
 
 nav {
