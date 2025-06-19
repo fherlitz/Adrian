@@ -147,15 +147,15 @@ const translations = {
         about: {
             title: "ABOUT ME",
             text: "I am a guitarist, music producer, and mixing engineer from Monterrey, Mexico, now based in Berlin, Germany.",
-            text2: "With over 10 years of experience in the music field and a deep love for crafting immersive soundscapes, I will help you craft music that inspires and leaves a lasting impression.",
+            text2: "1. With over 10 years of experience in the music field and a deep love for crafting immersive soundscapes, I will help you craft music that inspires and leaves a lasting impression.",
             text3: "My approach is all about angular decisions and intuitive moves — capturing the spirit of each project, pushing boundaries, and always staying true to the artist's vision.",
-            text4: "Driven making music that resonates across borders, I focus up to the finest aspects to create something both personal and universal, bringing a unique perspective — every detail counts."
+            text4: "I like to make music that transcends borders, focusing up to the finest aspects to create something both personal and unique. Every detail matters."
         },
         work: {
             title: "WHAT CAN I DO FOR YOU",
             production: {
                 title: "PRODUCTION",
-                text: "I help you develop your song, from the initial idea to the final production."
+                text: "I help you develop your song from the initial idea to the final production."
             },
             guitar: {
                 title: "GUITAR WORK",
