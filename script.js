@@ -266,7 +266,7 @@ const translations = {
                 text: "Te ayudo a desarrollar tu canción, desde la idea inicial hasta la producción final."
             },
             guitar: {
-                title: "TRABAJO DE GUITARRA",
+                title: "GUITARRAS",
                 text: "Todo lo relacionado con la guitarra. Desde grabaciones de alta calidad hasta presentaciones en vivo."
             },
             mixing: {
