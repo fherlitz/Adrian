@@ -179,7 +179,8 @@ const translations = {
             lastname: "Last name",
             email: "E-mail",
             message: "Message",
-            send: "SEND"
+            send: "SEND",
+            disclaimer: "Your data will only be used to your request. You can find our data protection information <a href=\"imprint.html\" target=\"_blank\">here</a>."
         },
         footer: {
             contact: "CONTACT",
@@ -202,19 +203,30 @@ const translations = {
             privacy: {
                 title: "Privacy Policy",
                 section1: {
-                    title: "1. Data Protection at a Glance",
+                    title: "1. Data Protection Overview",
                     general: {
                         title: "General Notes",
-                        text: "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can personally identify you."
+                        text: "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can personally identify you. This website does not use cookies, except for those strictly necessary for technical functionality (provided by GitHub Pages)."
                     },
                     data: {
                         title: "Data Collection on this Website",
-                        text: "This website uses EmailJS for the contact form functionality. When you submit the contact form, your data is processed through EmailJS's servers. The data is only used to send you a response and is not stored permanently."
+                        text: "Who is responsible for data collection on this website? Data processing on this website is carried out by the website operator. You can find their contact details in the imprint of this website."
+                    },
+                    how: {
+                        title: "How do we collect your data?",
+                        text: "Your data is collected by you providing it to us. This can be data that you enter into a contact form. Other data is automatically collected when visiting the website through our IT systems. This is mainly technical data (e.g. internet browser, operating system or time of page view)."
+                    },
+                    rights: {
+                        title: "What rights do you have regarding your data?",
+                        text: "You have the right to receive information about the origin, recipient and purpose of your stored personal data free of charge at any time. You also have the right to request the correction, blocking or deletion of this data. For this and other questions about data protection, you can contact us at any time at the address given in the imprint."
                     }
                 },
                 section2: {
                     title: "2. Hosting",
-                    text: "This website is hosted on GitHub Pages. GitHub may collect certain technical data such as IP addresses and browser information. For more information, please refer to GitHub's privacy policy."
+                    github: {
+                        title: "GitHub Pages",
+                        text: "This website is hosted on GitHub Pages. The provider is GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. GitHub may collect certain technical data such as IP addresses and browser information. For more information, please refer to GitHub's privacy policy: https://docs.github.com/en/github/site-policy/github-privacy-statement"
+                    }
                 },
                 section3: {
                     title: "3. General Notes and Mandatory Information",
@@ -225,14 +237,49 @@ const translations = {
                     party: {
                         title: "Note on the Responsible Party",
                         text: "The party responsible for processing data on this website is:"
+                    },
+                    revoke: {
+                        title: "Revocation of your consent to data processing",
+                        text: "Many data processing operations are only possible with your express consent. You can revoke an already given consent at any time. An informal notification by email to us is sufficient for this. The legality of the data processing carried out until the revocation remains unaffected by the revocation."
+                    },
+                    complaint: {
+                        title: "Right to complain to the competent supervisory authority",
+                        text: "In the event of data protection violations, the affected person has the right to complain to the competent supervisory authority. The competent supervisory authority for data protection matters is the data protection officer for the federal state of Berlin (Germany)."
                     }
                 },
                 section4: {
                     title: "4. Data Collection on this Website",
                     form: {
                         title: "Contact Form",
-                        text: "If you send us inquiries via the contact form, your information from the inquiry form, including the contact details you provided there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We do not share this data without your consent."
+                        text: "If you send us inquiries via the contact form, your information from the inquiry form, including the contact details you provided there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We do not share this data without your consent. The processing of the data entered into the contact form is therefore based exclusively on your consent (Art. 6 Para. 1 lit. a GDPR)."
+                    },
+                    emailjs: {
+                        title: "EmailJS",
+                        text: "This website uses EmailJS for contact form functionality. The provider is EmailJS Ltd. When you submit the contact form, your data is processed through EmailJS's servers. The data is only used to send you a response and is not stored permanently. For more information, see EmailJS's privacy policy: https://www.emailjs.com/legal/privacy-policy/"
                     }
+                },
+                section5: {
+                    title: "5. Your Rights",
+                    access: {
+                        title: "Right of Access",
+                        text: "You have the right to request confirmation as to whether relevant data is being processed and to obtain information about this data as well as further information and copies of the data in accordance with legal provisions."
+                    },
+                    rectification: {
+                        title: "Right to Rectification",
+                        text: "You have the right to request the completion of data concerning you or the correction of incorrect data concerning you in accordance with legal provisions."
+                    },
+                    erasure: {
+                        title: "Right to Erasure",
+                        text: "You have the right to request the deletion of data concerning you in accordance with legal provisions."
+                    },
+                    portability: {
+                        title: "Right to Data Portability",
+                        text: "You have the right to receive the data concerning you that you have provided to us in a structured, common and machine-readable format and to transmit this data to another controller."
+                    }
+                },
+                section6: {
+                    title: "6. Storage Duration",
+                    text: "Unless a more specific storage duration has been specified in this privacy policy, your personal data will remain with us until the purpose for data processing ceases to apply. If you make a legitimate request for deletion or revoke consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data."
                 }
             },
             copyright: {
@@ -287,7 +334,8 @@ const translations = {
             lastname: "Apellido",
             email: "Correo electrónico",
             message: "Mensaje",
-            send: "ENVIAR"
+            send: "ENVIAR",
+            disclaimer: "Tus datos solo se utilizarán para procesar tu solicitud. Puedes encontrar nuestra información de protección de datos <a href=\"imprint.html\" target=\"_blank\">aquí</a>."
         },
         footer: {
             contact: "CONTACTO",
@@ -308,21 +356,32 @@ const translations = {
                 title: "Responsable del contenido según § 55 Abs. 2 RStV"
             },
             privacy: {
-                title: "Política de Privacidad",
+                title: "Aviso Legal y Política de Privacidad",
                 section1: {
-                    title: "1. Protección de Datos",
+                    title: "1. Protección de Datos de un Vistazo",
                     general: {
                         title: "Notas Generales",
-                        text: "Las siguientes notas proporcionan una descripción simple de lo que sucede con sus datos personales cuando visita este sitio web. Los datos personales son cualquier dato que puede identificarlo personalmente."
+                        text: "Las siguientes notas proporcionan una descripción simple de lo que sucede con sus datos personales cuando visita este sitio web. Los datos personales son cualquier dato que puede identificarlo personalmente. Este sitio web no utiliza cookies, salvo las estrictamente necesarias para el funcionamiento técnico (proporcionadas por GitHub Pages)."
                     },
                     data: {
                         title: "Recopilación de Datos en este Sitio Web",
-                        text: "Este sitio web utiliza EmailJS para la funcionalidad del formulario de contacto. Cuando envía el formulario de contacto, sus datos se procesan a través de los servidores de EmailJS. Los datos solo se utilizan para enviarle una respuesta y no se almacenan permanentemente."
+                        text: "¿Quién es responsable de la recopilación de datos en este sitio web? El procesamiento de datos en este sitio web es realizado por el operador del sitio web. Puede encontrar sus datos de contacto en el aviso legal de este sitio web."
+                    },
+                    how: {
+                        title: "¿Cómo recopilamos sus datos?",
+                        text: "Sus datos se recopilan cuando usted nos los proporciona. Esto pueden ser datos que ingresa en un formulario de contacto. Otros datos se recopilan automáticamente al visitar el sitio web a través de nuestros sistemas informáticos. Estos son principalmente datos técnicos (por ejemplo, navegador de internet, sistema operativo o hora de visualización de la página)."
+                    },
+                    rights: {
+                        title: "¿Qué derechos tiene con respecto a sus datos?",
+                        text: "Tiene derecho a recibir información sobre el origen, destinatario y propósito de sus datos personales almacenados de forma gratuita en cualquier momento. También tiene derecho a solicitar la corrección, bloqueo o eliminación de estos datos. Para esto y otras preguntas sobre protección de datos, puede contactarnos en cualquier momento en la dirección proporcionada en el aviso legal."
                     }
                 },
                 section2: {
                     title: "2. Alojamiento",
-                    text: "Este sitio web está alojado en GitHub Pages. GitHub puede recopilar ciertos datos técnicos como direcciones IP e información del navegador. Para más información, consulte la política de privacidad de GitHub."
+                    github: {
+                        title: "GitHub Pages",
+                        text: "Este sitio web está alojado en GitHub Pages. El proveedor es GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. GitHub puede recopilar ciertos datos técnicos como direcciones IP e información del navegador. Para más información, consulte la política de privacidad de GitHub: https://docs.github.com/en/github/site-policy/github-privacy-statement"
+                    }
                 },
                 section3: {
                     title: "3. Notas Generales e Información Obligatoria",
@@ -333,14 +392,49 @@ const translations = {
                     party: {
                         title: "Nota sobre la Parte Responsable",
                         text: "La parte responsable del procesamiento de datos en este sitio web es:"
+                    },
+                    revoke: {
+                        title: "Revocación de su consentimiento para el procesamiento de datos",
+                        text: "Muchas operaciones de procesamiento de datos solo son posibles con su consentimiento expreso. Puede revocar un consentimiento ya otorgado en cualquier momento. Una notificación informal por correo electrónico es suficiente para esto. La legalidad del procesamiento de datos realizado hasta la revocación no se ve afectada por la revocación."
+                    },
+                    complaint: {
+                        title: "Derecho a presentar una queja ante la autoridad supervisora competente",
+                        text: "En caso de violaciones de protección de datos, la persona afectada tiene derecho a presentar una queja ante la autoridad supervisora competente. La autoridad competente es el responsable de protección de datos del estado federado de Berlín (Alemania)."
                     }
                 },
                 section4: {
                     title: "4. Recopilación de Datos en este Sitio Web",
                     form: {
                         title: "Formulario de Contacto",
-                        text: "Si nos envía consultas a través del formulario de contacto, su información del formulario de consulta, incluidos los datos de contacto que proporcionó allí, será almacenada por nosotros con el propósito de procesar la consulta y en caso de preguntas de seguimiento. No compartimos estos datos sin su consentimiento."
+                        text: "Si nos envía consultas a través del formulario de contacto, su información del formulario de consulta, incluidos los datos de contacto que proporcionó allí, será almacenada por nosotros con el propósito de procesar la consulta y en caso de preguntas de seguimiento. No compartimos estos datos sin su consentimiento. El procesamiento de los datos ingresados en el formulario de contacto se basa exclusivamente en su consentimiento (Art. 6 Para. 1 lit. a RGPD)."
+                    },
+                    emailjs: {
+                        title: "EmailJS",
+                        text: "Este sitio web utiliza EmailJS para la funcionalidad del formulario de contacto. El proveedor es EmailJS Ltd. Cuando envía el formulario de contacto, sus datos se procesan a través de los servidores de EmailJS. Los datos solo se utilizan para enviarle una respuesta y no se almacenan permanentemente. Para más información, consulte la política de privacidad de EmailJS: https://www.emailjs.com/legal/privacy-policy/"
                     }
+                },
+                section5: {
+                    title: "5. Sus Derechos",
+                    access: {
+                        title: "Derecho de Acceso",
+                        text: "Tiene derecho a solicitar confirmación sobre si se están procesando datos relevantes y obtener información sobre estos datos, así como información adicional y copias de los datos de acuerdo con las disposiciones legales."
+                    },
+                    rectification: {
+                        title: "Derecho de Rectificación",
+                        text: "Tiene derecho a solicitar la completación de datos que le conciernen o la corrección de datos incorrectos que le conciernen de acuerdo con las disposiciones legales."
+                    },
+                    erasure: {
+                        title: "Derecho de Eliminación",
+                        text: "Tiene derecho a solicitar la eliminación de datos que le conciernen de acuerdo con las disposiciones legales."
+                    },
+                    portability: {
+                        title: "Derecho a la Portabilidad de Datos",
+                        text: "Tiene derecho a recibir los datos que le conciernen que nos ha proporcionado en un formato estructurado, común y legible por máquina y a transmitir estos datos a otro controlador."
+                    }
+                },
+                section6: {
+                    title: "6. Duración del Almacenamiento",
+                    text: "A menos que se haya especificado una duración de almacenamiento más específica en esta política de privacidad, sus datos personales permanecerán con nosotros hasta que el propósito del procesamiento de datos deje de aplicarse. Si presenta una solicitud legítima de eliminación o revoca el consentimiento para el procesamiento de datos, sus datos serán eliminados a menos que tengamos otras razones legalmente permisibles para almacenar sus datos personales."
                 }
             },
             copyright: {
@@ -395,7 +489,8 @@ const translations = {
             lastname: "Nachname",
             email: "E-Mail",
             message: "Nachricht",
-            send: "SENDEN"
+            send: "SENDEN",
+            disclaimer: "Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Unsere Datenschutzhinweise finden Sie <a href=\"imprint.html\" target=\"_blank\">hier</a>."
         },
         footer: {
             contact: "KONTAKT",
@@ -421,34 +516,80 @@ const translations = {
                     title: "1. Datenschutz auf einen Blick",
                     general: {
                         title: "Allgemeine Hinweise",
-                        text: "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können."
+                        text: "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Diese Website verwendet keine Cookies, außer solchen, die für den rein technischen Betrieb erforderlich sind (bereitgestellt von GitHub Pages)."
                     },
                     data: {
                         title: "Datenerfassung auf dieser Website",
-                        text: "Diese Website nutzt EmailJS für die Kontaktformular-Funktionalität. Wenn Sie das Kontaktformular absenden, werden Ihre Daten über EmailJS's Server verarbeitet. Die Daten werden nur verwendet, um Ihnen eine Antwort zu senden und werden nicht dauerhaft gespeichert."
+                        text: "Wer ist verantwortlich für die Datenerfassung auf dieser Website? Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Seine Kontaktdaten können Sie dem Impressum dieser Website entnehmen."
+                    },
+                    how: {
+                        title: "Wie erfassen wir Ihre Daten?",
+                        text: "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs)."
+                    },
+                    rights: {
+                        title: "Welche Rechte haben Sie bezüglich Ihrer Daten?",
+                        text: "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden."
                     }
                 },
                 section2: {
                     title: "2. Hosting",
-                    text: "Diese Website wird auf GitHub Pages gehostet. GitHub kann bestimmte technische Daten wie IP-Adressen und Browser-Informationen sammeln. Weitere Informationen finden Sie in GitHubs Datenschutzerklärung."
+                    github: {
+                        title: "GitHub Pages",
+                        text: "Diese Website wird auf GitHub Pages gehostet. Anbieter ist die GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. GitHub kann bestimmte technische Daten wie IP-Adressen und Browser-Informationen erfassen. Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub: https://docs.github.com/en/github/site-policy/github-privacy-statement"
+                    }
                 },
                 section3: {
                     title: "3. Allgemeine Hinweise und Pflichtinformationen",
                     protection: {
                         title: "Datenschutz",
-                        text: "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung."
+                        text: "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung."
                     },
                     party: {
-                        title: "Hinweis zur verantwortlichen Stelle",
-                        text: "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:"
+                        title: "Note on the Responsible Party",
+                        text: "The party responsible for processing data on this website is:"
+                    },
+                    revoke: {
+                        title: "Widerruf Ihrer Einwilligung zur Datenverarbeitung",
+                        text: "Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt."
+                    },
+                    complaint: {
+                        title: "Beschwerderecht bei der zuständigen Aufsichtsbehörde",
+                        text: "Im Falle datenschutzrechtlicher Verstöße steht dem Betroffenen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde in datenschutzrechtlichen Fragen ist der Berliner Beauftragte für Datenschutz und Informationsfreiheit."
                     }
                 },
                 section4: {
                     title: "4. Datenerfassung auf dieser Website",
                     form: {
                         title: "Kontaktformular",
-                        text: "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter."
+                        text: "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)."
+                    },
+                    emailjs: {
+                        title: "EmailJS",
+                        text: "Diese Website verwendet EmailJS für die Kontaktformular-Funktionalität. Anbieter ist EmailJS Ltd. Wenn Sie das Kontaktformular absenden, werden Ihre Daten über die Server von EmailJS verarbeitet. Die Daten werden nur verwendet, um Ihnen eine Antwort zu senden, und werden nicht dauerhaft gespeichert. Weitere Informationen finden Sie in der Datenschutzerklärung von EmailJS: https://www.emailjs.com/legal/privacy-policy/"
                     }
+                },
+                section5: {
+                    title: "5. Ihre Rechte",
+                    access: {
+                        title: "Recht auf Auskunft",
+                        text: "Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen und Kopie der Daten entsprechend den gesetzlichen Bestimmungen."
+                    },
+                    rectification: {
+                        title: "Recht auf Berichtigung",
+                        text: "Sie haben entsprechend den gesetzlichen Bestimmungen das Recht, die Vervollständigung der Sie betreffenden Daten oder die Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen."
+                    },
+                    erasure: {
+                        title: "Recht auf Löschung",
+                        text: "Sie haben das Recht, entsprechend den gesetzlichen Bestimmungen die Löschung der Sie betreffenden Daten zu verlangen."
+                    },
+                    portability: {
+                        title: "Recht auf Datenübertragbarkeit",
+                        text: "Sie haben das Recht, die Sie betreffenden Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten und diese Daten einem anderen Verantwortlichen zu übermitteln."
+                    }
+                },
+                section6: {
+                    title: "6. Speicherdauer",
+                    text: "Soweit in dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben."
                 }
             },
             copyright: {
@@ -470,13 +611,31 @@ function updateContent(lang) {
         for (const key of keys) {
             value = value[key];
         }
-        if (value) {
-            // Use innerHTML for content that contains HTML tags (like <br>)
-            if (value.includes('<br>')) {
-                element.innerHTML = value;
+
+        // Skip if key not found
+        if (!value) return;
+
+        /*
+         * Handle bilingual strings stored in the translations object in the form
+         * "<LANG_A> / <LANG_B>".  For better maintainability we keep the raw
+         * bilingual text in the object and split it on the fly depending on the
+         * currently active language:
+         *   - For English ("en") we keep the part AFTER the last " / "
+         *   - For all other languages we keep the part BEFORE the first " / "
+         */
+        if (typeof value === 'string' && value.includes(' / ')) {
+            if (lang === 'en') {
+                value = value.substring(value.lastIndexOf(' / ') + 3).trim();
             } else {
-                element.textContent = value;
+                value = value.substring(0, value.indexOf(' / ')).trim();
             }
+        }
+
+        // Inject (render as HTML if value contains any HTML tag)
+        if (value.includes('<')) {
+            element.innerHTML = value;
+        } else {
+            element.textContent = value;
         }
     });
 

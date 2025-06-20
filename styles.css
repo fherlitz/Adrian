@@ -1,3 +1,72 @@
+/* Self-hosted fonts */
+@font-face {
+    font-family: 'Anton';
+    src: url('fonts/Anton/Anton-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('fonts/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth,wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('fonts/IBM_Plex_Sans/IBMPlexSans-Italic-VariableFont_wdth,wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('fonts/fontawesome/webfonts/fa-solid-900.woff2') format('woff2'),
+         url('fonts/fontawesome/webfonts/fa-solid-900.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('fonts/fontawesome/webfonts/fa-brands-400.woff2') format('woff2'),
+         url('fonts/fontawesome/webfonts/fa-brands-400.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Font Awesome icon classes */
+.fas, .far, .fab {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fas {
+    font-weight: 900;
+}
+
+.far {
+    font-weight: 400;
+}
+
+.fab {
+    font-weight: 400;
+}
+
+/* Font Awesome icon content */
+.fa-globe:before { content: "\f0ac"; }
+.fa-chevron-down:before { content: "\f078"; }
+.fa-bars:before { content: "\f0c9"; }
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -1101,4 +1170,16 @@ body::before {
 
 .imprint-content h1 {
     word-break: break-word;
+}
+
+/* Disclaimer link */
+.data-disclaimer a {
+    color: var(--white);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    transition: color 0.3s ease;
+}
+
+.data-disclaimer a:hover {
+    color: var(--secondary-color);
 }
