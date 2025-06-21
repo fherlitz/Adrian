@@ -301,10 +301,10 @@ const translations = {
         },
         about: {
             title: "SOBRE MÍ",
-            text: "Soy guitarrista, productor musical e ingeniero de mezcla de Monterrey, México, actualmente radicado en Berlín, Alemania.",
-            text2: "Con más de 10 años de experiencia en el campo musical y un profundo amor por crear paisajes sonoros inmersivos, te ayudaré a elaborar música que inspire y deje una impresión duradera.",
-            text3: "Mi enfoque se basa en decisiones angulares y movimientos intuitivos — capturando el espíritu de cada proyecto, empujando límites y siempre manteniéndome fiel a la visión del artista.",
-            text4: "Impulsado por la idea de hacer que la música resuene rompiendo fronteras, me enfoco en cada elemento para crear algo tanto personal como universal, aportando una perspectiva única — cada detalle cuenta."
+            text: "Soy guitarrista, productor musical e ingeniero de mezcla originario de Monterrey, México, y actualmente radico en Berlín, Alemania.",
+            text2: "Con más de 10 años de experiencia en el ámbito musical y un profundo amor por crear paisajes sonoros inmersivos, te ayudaré a elaborar música que inspire y deje una impresión duradera.",
+            text3: "Mi enfoque se basa en decisiones angulares y movimientos intuitivos, capturando el espíritu de cada proyecto, empujando límites y manteniéndome siempre fiel a la visión del artista.",
+            text4: "Impulsado por la idea de hacer que la música cruce fronteras, me concentro en cada elemento del proyecto para crear algo tanto personal como universal, aportando una perspectiva única. Cada detalle cuenta."
         },
         work: {
             title: "LO QUE YO PUEDO HACER POR TI",
