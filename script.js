@@ -180,7 +180,7 @@ const translations = {
             email: "E-mail",
             message: "Message",
             send: "SEND",
-            disclaimer: "Your data will only be used to your request. You can find our data protection information <a href=\"imprint.html\" target=\"_blank\">here</a>."
+            disclaimer: "Your data will only be used to process your request. For details, see <a href=\"imprint.html\" target=\"_blank\" rel=\"noopener\">Imprint & Privacy Policy</a>."
         },
         footer: {
             contact: "CONTACT",
@@ -335,7 +335,7 @@ const translations = {
             email: "Correo electrónico",
             message: "Mensaje",
             send: "ENVIAR",
-            disclaimer: "Tus datos solo se utilizarán para procesar tu solicitud. Puedes encontrar nuestra información de protección de datos <a href=\"imprint.html\" target=\"_blank\">aquí</a>."
+            disclaimer: "Tus datos solo se utilizarán para procesar tu solicitud. Para más detalles, consulta la <a href=\"imprint.html\" target=\"_blank\" rel=\"noopener\">Aviso legal y política de privacidad</a>."
         },
         footer: {
             contact: "CONTACTO",
@@ -490,7 +490,7 @@ const translations = {
             email: "E-Mail",
             message: "Nachricht",
             send: "SENDEN",
-            disclaimer: "Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Unsere Datenschutzhinweise finden Sie <a href=\"imprint.html\" target=\"_blank\">hier</a>."
+            disclaimer: "Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Unsere Datenschutzhinweise finden Sie im <a href=\"imprint.html\" target=\"_blank\" rel=\"noopener\">Impressum & Datenschutzerklärung</a>."
         },
         footer: {
             contact: "KONTAKT",

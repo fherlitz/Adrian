@@ -23,6 +23,8 @@
     <meta property="og:image" content="fotos/adrian.webp">
     <meta name="twitter:card" content="summary_large_image">
     <title>Adrian Cantu</title>
+    <!-- Preload Anton font early for LCP text -->
+    <link rel="preload" href="fonts/Anton/Anton-Regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="styles.css">
     
     <!-- Critical mobile CSS inline for instant rendering -->
@@ -107,6 +109,9 @@
         }
     }
     </script>
+    
+    <!-- Preload critical resources for faster rendering -->
+    <link rel="preload" href="styles.css" as="style">
 </head>
 <body>
     <header>
