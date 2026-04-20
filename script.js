@@ -147,7 +147,7 @@ const translations = {
         about: {
             title: "ABOUT ME",
             text: "I am a guitarist, music producer, and mixing engineer from Monterrey, Mexico, now based in Berlin, Germany.",
-            text2: "1. With over 10 years of experience in the music field and a deep love for crafting immersive soundscapes, I will help you craft music that inspires and leaves a lasting impression.",
+            text2: "With over 10 years of experience in the music field and a deep love for crafting immersive soundscapes, I will help you craft music that inspires and leaves a lasting impression.",
             text3: "My approach is all about angular decisions and intuitive moves — capturing the spirit of each project, pushing boundaries, and always staying true to the artist's vision.",
             text4: "I like to make music that transcends borders, focusing up to the finest aspects to create something both personal and unique. Every detail matters."
         },
@@ -456,10 +456,10 @@ const translations = {
         },
         about: {
             title: "ÜBER MICH",
-            text: "Ich bin Gitarrist, Musikproduzent und Mixing Engineer aus Monterrey, Mexiko, und lebe mittlerweile in Berlin, Deutschland.",
-            text2: "Mit über zehn Jahren Erfahrung in der Musik und einer tiefen Leidenschaft für immersive Klang, helfe ich dir, Musik zu erschaffen, die inspiriert und einen bleibenden Eindruck hinterlässt.",
-            text3: "Mein Ansatz basiert auf präzisen Entscheidungen und intuitiven Impulsen, den Charakter jedes Projekts einfangen, und dabei stets der künstlerischen Vision treu bleiben.",
-            text4: "Getrieben von dem Wunsch, Musik zu schaffen, die über Grenzen hinweg berührt, achte ich auf jedes Element, um etwas zu kreieren, das sowohl persönlich als auch universell ist, mit einer einzigartigen Perspektive. Denn jedes Detail zählt."
+            text: "Ich bin Gitarrist, Musikproduzent und Mixing Engineer aus Monterrey, Mexiko und lebe mittlerweile in Berlin, Deutschland.",
+            text2: "Mit über zehn Jahren Erfahrung in der Musik und einer tiefen Leidenschaft für fesselnde Klänge, helfe ich dir, Musik zu erschaffen, die inspiriert und einen bleibenden Eindruck hinterlässt.",
+            text3: "Mein Ansatz basiert auf präzisen Entscheidungen und intuitiven Impulsen, den Charakter jedes Projekts einzufangen, und dabei stets der künstlerischen Vision treu zu bleiben.",
+            text4: "Getrieben von dem Wunsch, Musik zu schaffen, die über Grenzen hinweg berührt, achte ich auf jedes Element, um etwas zu kreieren, das sowohl persönlich als auch universell ist. Denn jedes Detail zählt."
         },
         work: {
             title: "WAS ICH FÜR DICH TUN KANN",
